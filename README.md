@@ -1,0 +1,2 @@
+# Mon_Candidat_Front
+Mon_Candidat_Front est le service qui fournie le front-end de l'application Mon candidat, une application moderne et intuitive qui sera utiliser dans le cadre de l'administration des élections
