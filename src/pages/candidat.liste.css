@@ -1,0 +1,126 @@
+.candidat-liste-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.liste-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e9ecef;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.liste-header h1 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: clamp(1.5rem, 4vw, 2rem); 
+}
+
+.btn-create {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-create:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.btn-create-empty {
+  background: #28a745;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+
+.candidats-grid {
+  display: grid;
+  gap: 20px;
+  width: 100%;
+}
+
+.candidats-grid {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 480px) {
+  .candidats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .candidats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .candidats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .candidat-liste-container {
+    padding: 20px 40px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .candidats-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 1536px) {
+  .candidats-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 379px) {
+  .candidat-liste-container {
+    padding: 10px;
+  }
+  
+  .liste-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .candidats-grid {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .candidats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) and (min-resolution: 192dpi) {
+  .candidats-grid {
+    gap: 15px;
+  }
+}

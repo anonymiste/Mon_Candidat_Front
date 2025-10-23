@@ -1,29 +1,30 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
+import CandidatListe from "../../pages/candidats/candidat.liste";
+import CandidatCreate from "../../pages/candidats/candidat.create";
+import CandidatEdit from "../../pages/candidats/candidat.edit";
+import CandidatShow from "../../pages/candidats/candidat.show";
 
 const router = createBrowserRouter([
+    
     {
         path: "/",
-        // element: <Login />,
-    },
-    {
-        path: "/tasks",
         children: [
-            // {
-            //     index: true,
-            //     element: <TasksList />
-            // },
-            // {
-            //     path: "create",
-            //     element: <TasksCreate />
-            // },
-            // {
-            //     path: ":id/edit",
-            //     element: <TasksEdit />
-            // },
-            // {
-            //     path: ":id/show",
-            //     element: <TasksShow />
-            // },
+            {
+                index: true,
+                element: <CandidatListe />
+            },
+            {
+                path: "candidates/create",
+                element: <CandidatCreate />
+            },
+            {
+                path: "candidates/:id/edit",
+                element: <CandidatEdit />
+            },
+            {
+                path: "candidates/:id/show",
+                element: <CandidatShow />
+            },
         ]
     }
 
